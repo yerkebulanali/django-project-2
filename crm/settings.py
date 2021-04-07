@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'tgak4pv2j_04eh9uk7#8dbbcfg%apr%#m!ik!x7bwlm=xau6k*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['yerkebulanali.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
 
     'django_filters',
+
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -84,7 +86,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -138,5 +139,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'test@gmail.com'
-EMAIL_HOST_PASSWORD = 'password'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
